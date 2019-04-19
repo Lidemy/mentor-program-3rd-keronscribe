@@ -31,6 +31,6 @@
 3. `last` 顯示之前的 login 紀錄
 4. `comm` 比較兩個檔案，把這兩個檔案印出來
 5. `fold` 可以把檔案折成設定字數的自動換行然後印出來
-`fold [-bs] [-w width] file`
+語法：`fold -w 想要的長度 file`
 
-
+[第三題參考](https://ss64.com/osx/)
