@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js init
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/huangqianronghuangqianrong/lidemy/mentor-program-3rd-keronscribe/homeworks/week3/package.json: Unexpected token } in JSON at position 111
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "week3",
+    "version": "1.0.0",
+    "scripts":
+    {
+    "hello": "echo Hello, world",
+    "test":"jest",
+    },
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
