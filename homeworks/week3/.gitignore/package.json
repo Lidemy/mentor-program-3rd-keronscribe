@@ -1,0 +1,11 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "description": "在交這週的作業以前，請務必確認 hw1~hw4 都已經通過 [Lidemy OJ](https://lidemy-oj.netlify.com/contests/2) 的測試並拿到 100 分。只有 hw5 例外，hw5 沒有寫對還是可以交作業（因為比較難）。",
+  "main": "hw1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
