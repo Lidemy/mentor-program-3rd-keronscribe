@@ -26,3 +26,8 @@ Base URL: `https://Cian-restaurants-platform.com`（平台根目錄網址)
 | 新增餐廳   | POST   | /restaurants     | name: 餐廳名 | 無              |
 | 刪除餐廳   | DELETE   | /restaurants/:id     | 無 | 無              |
 | 更改餐廳資訊   | PATCH   | /restaurants/:id     | name: 餐廳名 | 無              |
+本週作業參考資料：
+[twift](https://dev.twitch.tv/docs/api/reference/#get-top-games)
+[HTTP method](https://www.w3schools.com/tags/ref_httpmethods.asp)
+[node.js](http://nodejs.cn/api/http.html#http_new_agent_options)
+https://github.com/request/request#custom-http-headers
