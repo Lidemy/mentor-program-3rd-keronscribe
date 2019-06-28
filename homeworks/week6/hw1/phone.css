@@ -13,6 +13,7 @@ nav {
   background:     #2e3338;
   width:          100%;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 nav > div {
