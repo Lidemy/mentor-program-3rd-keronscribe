@@ -27,7 +27,7 @@
 
 1. 去觀察 Medium 的網站，連下面的推薦文章一起實作
 2. 去觀察 Medium 的網站，左側的功能不只拍手，連社交分享功能一起切出來
-3. 去觀察 Medium 的網站，並加上網頁上方的 nav bar
+3. 去觀察 Medium 的網站p8，並加上網頁上方的 nav bar
 
 ## hw3：CSS Diner
 

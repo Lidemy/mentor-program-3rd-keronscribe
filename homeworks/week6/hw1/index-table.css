@@ -1,0 +1,109 @@
+body {
+  color: 			    black;
+  font-family:		sans-serif;
+  font-size: 		  medium;
+  margin: 			  0px;
+  line-height:    1.2em;
+}
+
+nav {
+  position: 	   	fixed;
+  top: 			      0px;
+  left:  			    0px;
+  background:   	#2e3338;
+  width: 			    100%;
+}
+
+nav > div {
+  display: 			   inline-block;
+  margin: 			   10px;
+}
+
+#navTitle {
+  font-size:		20px;
+  color: 			white;
+  margin: 		17px;
+}
+
+.menu > ul{
+  padding-inline-start: 0px;
+}
+
+.menu > ul > li > a:hover {
+  color: 			white;
+}
+
+.menu > ul > li {
+  color: 			#737373;
+  display: 			inline;
+  margin-left: 		0px;
+  margin-right: 	5px;
+  margin-block-start: 0px;
+
+}
+
+.greetingArea {
+    background: #e6e9ed;
+    margin: 54px 0px 0px 0px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 400%;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.greetingArea > p {
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+
+.greetingArea > button {
+    transition: all 0.5s;
+    height: 50px;
+    width: 180px;
+    color: white;
+    background: #0078ff;
+    font-size: larger;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+}
+
+.greetingArea > button:hover {
+    background: lightpink;
+    cursor: pointer;
+}
+
+#allThreeArea {
+  display: table;
+  border-spacing: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#sectionrow {
+  display: table-row;
+}
+
+.section {
+  display: table-cell;
+  width: 33%;
+}
+
+.section > h2 {
+    font-size: 230%;
+    margin: 20px 0px;
+}
+
+.section > button {
+    color: white;
+    background: #616a72;
+    height: 35px;
+    width: 130px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 30px 0px 0px 0px;
+}
