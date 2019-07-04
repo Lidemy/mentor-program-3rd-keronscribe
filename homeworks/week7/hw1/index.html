@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>反應力測試小遊戲</title>
+	<style type="text/css">
+		body {
+		    margin: 0px;
+		}
+		.main {
+			width: 100%;
+			height: 100%;
+		}
+
+		.wrapper {
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			font-size: 3em;
+			font-weight:100;
+		}
+
+		.clickMe {
+			margin: 0px;
+		}
+
+		.replay-btn{
+			position: relative;
+   			left: 50%;
+    		transform: translateX(-50%);
+    		cursor: pointer;
+		}
+
+		.hareruyaChange {
+			background: lightcoral;
+		}
+
+		.btn-noshow{
+			display: none;
+		}
+		.clickable{
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p class="clickMe clickable">畫面變色時請點擊</p>
+		<button class="replay-btn btn-noshow">再來一次</button>
+	</div>
+	<script type="text/javascript">
+
+	function play(){
+		let waitTime = Math.floor(Math.random() * 2000) + 1000;
+		let changeTime = 0;
+		let clickTime = 0;
+		let timer = setTimeout(function() {
+			document.querySelector('body').classList.add('hareruyaChange');
+			changeTime = Date.now();
+		}, waitTime);
+
+		let element = document.querySelector('.clickMe')
+			.addEventListener('click', e =>{
+				if (clickTime === 0) {
+					clickTime = Date.now()
+					let reactTime = (clickTime - changeTime) / 1000
+					if (changeTime !== 0){
+						alert(`你的反應時間為：${reactTime}秒`)
+						document.querySelector('.replay-btn').classList.toggle('btn-noshow');
+						document.querySelector('.clickMe').classList.toggle('clickable');
+
+					} else {
+						alert('還沒變色喔，失敗！')
+						console.log(changeTime);
+						clearTimeout(timer);
+						document.querySelector('.replay-btn').classList.toggle('btn-noshow');
+						document.querySelector('.clickMe').classList.toggle('clickable');
+					}
+				} else {
+					e.preventDefult;
+				}
+		})
+	}
+
+	window.onload = play;
+	document.querySelector('.replay-btn').addEventListener('click',e => {
+		document.querySelector('body').classList.remove('hareruyaChange');
+		document.querySelector('.replay-btn').classList.toggle('btn-noshow');
+		document.querySelector('.clickMe').classList.toggle('clickable');
+		play();
+	})
+	
+
+	
+		
+
+	</script>
+</body>
+</html>
