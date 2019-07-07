@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>程式導師實驗計畫第9999期報名表單</title>
+	<title>程式導師實驗計畫第n期報名表單</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -21,7 +21,7 @@
 
 				<p class="note">*必填</p>
 			</div>
-			<form class="enroll_form">
+			<form class="enroll_form" >
 				<div class="question__email q">
 					<div class="question">電子郵件地址<span class="star">&nbsp;*</span></div>
 					<input type="email" name="user_email" placeholder="你的電子郵件" class="text__answer">
@@ -71,155 +71,6 @@
 		<p>Google 並未認可或建立這項內容。 檢舉濫用情形 - 服務條款</p>
 		<p>仿 Google 表單</p>
 	</div>
-	<script type="text/javascript">
-		document.querySelector('.enroll_form').addEventListener('submit', function(e) {
-			let email = document.querySelector('input[name=user_email]');
-			let emailList = document.querySelector('.email__warning').classList;
-			let questionEmail = document.querySelector('.question__email').classList;
-			
-			let userName = document.querySelector('input[name=user_name');			
-			let nameList = document.querySelector('.name__warning').classList;
-			let questionName = document.querySelector('.question__name').classList;
-
-			let userJob = document.querySelector('input[name=user_job]');
-			let jobList = document.querySelector('.job__warning').classList;
-			let questionJob = document.querySelector('.question__job').classList;
-			
-			let userFrom = document.querySelector('input[name=user_from]');
-			let fromList = document.querySelector('.from__warning').classList;
-			let questionFrom = document.querySelector('.question__from').classList;
-
-			let userBackground = document.querySelector('input[name=user_background]');
-			let backgroundList = document.querySelector('.background__warning').classList;
-			let questionBackground = document.querySelector('.question__background').classList;
-
-			let radios1 = document.querySelector('#radios1');
-			let radios2 = document.querySelector('#radios2');
-			let typeList = document.querySelector('.type__warning').classList;
-			let questionType = document.querySelector('.question__type').classList;
-
-			let submitApproval = false;
-
-
-			/* Email 驗證 */
-			if (email.value === ""){
-				e.preventDefault();
-				if (emailList.contains('goes__fine')){
-					emailList.remove('goes__fine');
-				}
-				if (!(questionEmail.contains('warning__bg'))){
-					questionEmail.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(emailList.contains('goes__fine'))) {
-				emailList.add('goes__fine');
-				}
-				if(questionEmail.contains('warning__bg')){
-					questionEmail.remove('warning__bg');
-				}
-				submitApproval = ture;
-			}
-			/* user name 驗證 */
-			if (userName.value === ""){
-				e.preventDefault();
-				if (nameList.contains('goes__fine')){
-					nameList.remove('goes__fine');
-				}
-				if (!(questionName.contains('warning__bg'))){
-					questionName.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(nameList.contains('goes__fine'))) {
-				nameList.add('goes__fine');
-				}
-				if(questionName.contains('warning__bg')){
-					questionName.remove('warning__bg');
-				}
-				submitApproval = ture;
-
-			}
-
-			/* enroll type 驗證(跳過) */
-			if (!((radios1.checked) || (radios2.checked))) {
-				e.preventDefault();
-				if (typeList.contains('goes__fine')){
-					typeList.remove('goes__fine');
-				}
-				if (!(questionType.contains('warning__bg'))){
-					questionType.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(typeList.contains('goes__fine'))) {
-				typeList.add('goes__fine');
-				}
-				if(questionType.contains('warning__bg')){
-					questionType.remove('warning__bg');
-				}
-				submitApproval = ture;
-			}
-
-			/* User Job 驗證 */
-			if (userJob.value === ""){
-				e.preventDefault();
-				if (jobList.contains('goes__fine')){
-					jobList.remove('goes__fine');
-				}
-				if (!(questionJob.contains('warning__bg'))){
-					questionJob.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(jobList.contains('goes__fine'))) {
-				jobList.add('goes__fine');
-				}
-				if(questionJob.contains('warning__bg')){
-					questionJob.remove('warning__bg');
-				}
-			}
-
-			/* User From 驗證 */
-			if (userFrom.value === ""){
-				e.preventDefault();
-				if (fromList.contains('goes__fine')){
-					fromList.remove('goes__fine');
-				}
-				if (!(questionFrom.contains('warning__bg'))){
-					questionFrom.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(fromList.contains('goes__fine'))) {
-				fromList.add('goes__fine');
-				}
-				if(questionFrom.contains('warning__bg')){
-					questionFrom.remove('warning__bg');
-				}
-			}
-
-			/* background 驗證 */
-			if (userBackground.value === ""){
-				e.preventDefault();
-				if (backgroundList.contains('goes__fine')){
-					backgroundList.remove('goes__fine');
-				}
-				if (!(questionBackground.contains('warning__bg'))){
-					questionBackground.add('warning__bg')
-				}
-				submitApproval = false;
-			} else {
-				if (!(backgroundList.contains('goes__fine'))) {
-				backgroundList.add('goes__fine');
-				}
-				if(questionBackground.contains('warning__bg')){
-					questionBackground.remove('warning__bg');
-				}
-				submitApproval = ture;
-			}
-			console.log(email.value);
-		})
-	</script>
+	<script type="text/javascript" src="index.js" charset="utf-8"></script>
 </body>
 </html>
