@@ -41,4 +41,6 @@ function add(a, b) {
   } return result.reverse().join('');
 }
 
-module.exports = add;
+// module.exports = add;
+
+console.log(add('555', '666'));
