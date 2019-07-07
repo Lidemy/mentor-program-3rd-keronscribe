@@ -1,5 +1,5 @@
 ## 什麼是 DOM？
-Document Object Module，文件物件模型。
+Document Object Model，文件物件模型。
 是一個 browser 解析 HTML 檔案之後生成的樹狀結構模型。其中，每一個 HTML Tags 都會被轉換為 DOM 中的 DOM Node，而使用 HTML5 的 JavaScript APIs 可以對這些 DOM nodes 進行新增、修改或刪除的操作。
 
 ## 事件傳遞機制的順序是什麼；什麼是冒泡，什麼又是捕獲？
