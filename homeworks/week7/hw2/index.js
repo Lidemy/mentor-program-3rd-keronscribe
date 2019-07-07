@@ -72,12 +72,7 @@ document.querySelector('.enroll_form').addEventListener('submit', (e) => {
   if ((email === '') || (name === '') || (job === '') || (from === '') || (type === '') || (backgound === '')) {
     e.preventDefault();
   } else {
-    /*
-    原本這裡有一行 alert('成功提交 <3');
-    但 eslint 禁用，然後網頁上提出的示範代碼我沒有看很懂
-    然後用了會有 'myCustomLib' is not defined 錯誤
-    所以決定先跳過 alert 功能。
-    */
+    alert('成功提交 <3');
     console.log(`Student Email:${user.email}
 Student Name: ${user.name}
 Student Job: ${user.job}
