@@ -1,0 +1,99 @@
+body {
+	margin:	0px;
+}
+
+.main {
+	background: coral;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	height: 300px;
+	z-index: 1;
+	align-items: center;
+	justify-content:center;
+	text-align: center;
+	display: grid;
+    justify-content: center;
+}
+
+.container {
+	background: url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") center center;
+	background-size: cover;
+	width: 100%;
+	height: 730px;
+}
+
+.info {
+    font-family: sans-serif;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.lottery {
+	line-height: 1em;
+	margin: 0px;
+    margin-block-start: 10px;
+	display: flex;
+    font-size: 5em;
+    justify-content: center;
+}
+
+.img {
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+}
+
+.result {
+	font-size:2em;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg__first {
+	background: url(https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2589&q=80);
+	background-size: cover;
+}
+
+.bg__second {
+	background: url(https://images.unsplash.com/photo-1484935494280-c21fdf67d5cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+	background-size: cover;
+}
+
+.bg__third {
+	background: url(https://images.unsplash.com/photo-1521302200778-33500795e128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+	background-size: cover;
+}
+
+.bg__none {
+	background: url(https://images.unsplash.com/photo-1536960242068-96914a09214c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+	background-size: cover;
+}
+
+.bg__oops {
+	background: url(https://images.unsplash.com/photo-1537732281245-d71d59bdc271?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80) center;
+	background-size: cover;
+}
+
+.none {
+	background: black;
+	color: white;
+}
+
+.result {
+	border: dashed grey 5px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.no__show {
+	display: none;
+}
+
+.lottery:hover{
+	cursor: pointer;
+}
