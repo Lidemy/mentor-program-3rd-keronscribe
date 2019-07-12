@@ -1,8 +1,10 @@
-function init() {
+const url = 'https://lidemy-book-store.herokuapp.com/posts';
+
+function getPosts(limitNumber) {
   const request = new XMLHttpRequest();
-  const url = 'https://lidemy-book-store.herokuapp.com/posts';
-  const limit = '_limit=20';
-  request.open('GET', `${url}?${limit}`, true);
+  let limit = '_limit=';
+  limit += limitNumber;
+  request.open('GET', `${url}?${limit}&_sort=id&_order=desc`, true);
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
       const responseText = JSON.parse(request.responseText);
@@ -11,7 +13,7 @@ function init() {
         const thePostContent = responseText[i].content;
         const thePostDiv = document.createElement('div');
         thePostDiv.classList.add('op');
-        thePostDiv.innerHTML = `<div class="id">${thePostId}</div>
+        thePostDiv.innerHTML = `<div class="id">${thePostId} 留下了：</div>
         <div class="post">${thePostContent}</div>`;
         document.querySelector('.op__wrapper').appendChild(thePostDiv);
       }
@@ -22,4 +24,26 @@ function init() {
   request.send('null');
 }
 
-window.onload = init();
+window.onload = getPosts(20);
+
+document.querySelector('.form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const request = new XMLHttpRequest();
+  let newContent = document.querySelector('textarea[name=content]').value;
+  newContent = `content=${newContent}`;
+  request.open('POST', url, true);
+  request.onload = function () {
+    const responseText = JSON.parse(request.responseText);
+    const thePostId = responseText.id;
+    const thePostContent = responseText.content;
+    const thePostDiv = document.createElement('div');
+    const postWrapper = document.querySelector('.op__wrapper');
+    thePostDiv.classList.add('op');
+    thePostDiv.innerHTML = `<div class="id">${thePostId} 留下了：</div>
+      <div class="post">${thePostContent}</div>`;
+    postWrapper.insertBefore(thePostDiv, postWrapper.childNodes[0]);
+  };
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  request.send(newContent);
+  document.querySelector('textarea[name=content]').value = '';
+});
