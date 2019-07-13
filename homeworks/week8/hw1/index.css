@@ -2,28 +2,29 @@ body {
 	margin:	0px;
 }
 
-.main {
-	background: coral;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 100%;
-	height: 300px;
-	z-index: 1;
-	align-items: center;
-	justify-content:center;
-	text-align: center;
-	display: grid;
-    justify-content: center;
-}
-
 .container {
+	display: flex;
+	justify-content:center;
+	align-items: center;
 	background: url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") center center;
 	background-size: cover;
 	width: 100%;
 	height: 730px;
 }
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: coral;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	text-align: center;
+    justify-content: center;
+    padding: 15px;
+}
+
 
 .info {
     font-family: sans-serif;
@@ -35,23 +36,20 @@ body {
 .lottery {
 	line-height: 1em;
 	margin: 0px;
+	padding: 10px;
     margin-block-start: 10px;
 	display: flex;
     font-size: 5em;
     justify-content: center;
+    border: dashed;
+    border-color: white;
+    border-radius: 8px;
 }
 
 .img {
 	height: 100px;
 	width: 100px;
-	display: inline-block;
-}
-
-.result {
-	font-size:2em;
-	display: flex;
-    justify-content: center;
-    align-items: center;
+	display: inline-flex;
 }
 
 .bg__first {
@@ -85,9 +83,14 @@ body {
 }
 
 .result {
-	border: dashed grey 5px;
+	font-size:3em;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border: dashed white 5px;
 	border-radius: 10px;
 	padding: 10px;
+	line-height: 1em;
 }
 
 .no__show {
