@@ -77,9 +77,20 @@ body {
 	background-size: cover;
 }
 
+.result__pics {
+	height: 100px;
+	width: 100px;
+}
+
 .none {
 	background: black;
 	color: white;
+}
+.sorry {
+	font-size:45px;
+}
+.none__emoji{
+	font-size:70px;
 }
 
 .result {

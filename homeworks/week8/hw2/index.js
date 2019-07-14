@@ -2,8 +2,7 @@ const url = 'https://lidemy-book-store.herokuapp.com/posts';
 
 function getPosts(limitNumber) {
   const request = new XMLHttpRequest();
-  let limit = '_limit=';
-  limit += limitNumber;
+  const limit = `_limit=${limitNumber}`;
   request.open('GET', `${url}?${limit}&_sort=id&_order=desc`, true);
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
