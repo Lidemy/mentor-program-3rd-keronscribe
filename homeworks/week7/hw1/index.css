@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+}
+
+.wrapper {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 3em;
+	font-weight:100;
+}
+
+.clickMe {
+	margin: 0px;
+}
+
+.replay-btn{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.hareruyaChange {
+	background: lightcoral;
+}
+
+.btn-noshow{
+	display: none;
+}
