@@ -1,0 +1,10 @@
+.wapper {
+  width: 70%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.btn-delete:hover,
+.btn-done {
+  cursor: pointer;
+}

@@ -29,7 +29,8 @@ document.querySelector('.form').addEventListener('submit', (e) => {
   e.preventDefault();
   const request = new XMLHttpRequest();
   let newContent = document.querySelector('textarea[name=content]').value;
-  newContent = `content=${newContent}`;
+  const content = encodeURIComponent(newContent);
+  newContent = `content=${content}`;
   request.open('POST', url, true);
   request.onload = function () {
     const responseText = JSON.parse(request.responseText);

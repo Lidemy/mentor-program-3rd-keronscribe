@@ -3,7 +3,8 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
-    jest: true
+    jest: true,
+    jquery: true,
   },
   extends: 'airbnb',
   globals: {
@@ -17,7 +18,7 @@ module.exports = {
     ecmaVersion: 2018,
   },
   plugins: [
-    'react',
+    'react','jquery'
   ],
   rules: {
     "no-console": "off"
