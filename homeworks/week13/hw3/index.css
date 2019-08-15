@@ -1,0 +1,47 @@
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+.notice {
+  color: aliceblue;
+}
+.nav-item,
+.navbar-nav {
+  display: inline-block;
+}
+
+.nav-item {
+  margin-left: 5px;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  border: dotted 1px grey;
+  border-radius: 5px;
+  margin: 20px 50px;
+  font-size: 1.1em;
+}
+
+.child {
+  width: 90%;
+}
+
+.option {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.same_user {
+  border-color: black;
+}
+
+pre {
+  font-family: sans-serif;
+  font-size: medium;
+}
