@@ -1,0 +1,63 @@
+.btn,
+.cal__monitor {
+  background: #fff1bc;
+  border: #7dc383 2px solid;
+  color: #7dc383;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 80px;
+  border-radius: 20px;
+}
+.btn {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background: #7dc383;
+  color: #fff1bc;
+}
+.btn__op {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn__op:hover {
+  background: #699c78;
+  color: #fff1bc;
+}
+.cal {
+  background: #fff1bc;
+}
+.clear {
+  width: 258px;
+}
+.btn__equal {
+  width: 168px;
+}
+.cal__monitor {
+  color: #699c78;
+  font-weight: 600;
+  height: 18.4px;
+  width: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.cal {
+  margin: 0 auto;
+  width: 360px;
+  justify-items: center;
+  border: #699c78 2px solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+.btn__op {
+  border: #699c78 2px solid;
+}

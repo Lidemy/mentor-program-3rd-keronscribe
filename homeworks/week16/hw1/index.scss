@@ -1,0 +1,72 @@
+$main-color: #fff1bc;
+$btn: #7dc383;
+$btn-color: white;
+$operator-color: #699c78;
+$border-radius: 20px;
+
+%btn {
+  background: $main-color;
+  border: $btn 2px solid;
+  color: $btn;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 80px;
+  border-radius: $border-radius;
+}
+
+%btn-ani {
+  transition: all 0.5s;
+  &:hover {
+    background: $btn;
+    color: $main-color;
+  }
+}
+%btn__op-ani {
+  transition: all 0.5s;
+  &:hover {
+    background: $operator-color;
+    color: $main-color;
+  }
+}
+.cal {
+  background: $main-color;
+}
+.btn {
+  @extend %btn-ani;
+  @extend %btn;
+}
+
+.clear {
+  width: 258px;
+}
+.btn__equal {
+  width: 168px;
+}
+
+.cal__monitor {
+  @extend %btn;
+  color: $operator-color;
+  font-weight: 600;
+  height: 18.4px;
+  width: 310px;
+  display: flex;
+  justify-content: flex-end;
+}
+.cal {
+  margin: 0 auto;
+  width: 360px;
+  justify-items: center;
+  border: $operator-color 2px solid;
+  border-radius: $border-radius;
+  padding: 20px;
+}
+
+.btn__op {
+  border: $operator-color 2px solid;
+  @extend %btn__op-ani;
+}
