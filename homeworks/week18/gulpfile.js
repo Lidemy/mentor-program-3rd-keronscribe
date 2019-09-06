@@ -1,5 +1,3 @@
-
-
 const { src, dest, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');

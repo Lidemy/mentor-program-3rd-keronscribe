@@ -8,3 +8,8 @@
 .btn-done {
   cursor: pointer;
 }
+
+.done {
+  background: #4444;
+  color: #fff;
+}
