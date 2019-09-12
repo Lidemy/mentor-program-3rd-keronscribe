@@ -9,25 +9,14 @@ function render() {
   $('.list-group').empty();
   $('.list-group').append(
     list.map((item) => {
-      if (item.done === false) {
-        // 未完成
-        console.log('item.id= ', item.id);
-        return `<li
-        class="list-group-item d-flex justify-content-between align-items-center">${item.content}
+      console.log('item.id= ', item.id);
+      return `<li
+        class="list-group-item d-flex justify-content-between align-items-center ${item.done ? 'done' : ''}">${item.content}
         <div>
-          <span class="badge badge-primary badge-pill btn-done" data-id="${item.id}" >mark as done</span>
+          <span class="badge badge-primary badge-pill btn-done" data-id="${item.id}" >${item.done === false ? 'mark as done' : 'Done'}</span>
           <span class="badge badge-primary badge-pill btn-delete" data-id="${item.id}">X</span>
         </div>
         </li>`;
-      }
-      // 已完成
-      return `<li
-      class="list-group-item d-flex justify-content-between align-items-center done">${item.content}
-      <div>
-        <span class="badge badge-primary badge-pill btn-done" data-id="${item.id}" >Done</span>
-        <span class="badge badge-primary badge-pill btn-delete" data-id="${item.id}">X</span>
-      </div>
-      </li>`;
     }),
   );
 }
