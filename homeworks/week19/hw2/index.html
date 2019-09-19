@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cian's Todo List</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">TODOS</h1>
+      <div class="wrapper">
+        <div class="input">
+          &#9744;
+          <input
+            class="input_newtodo"
+            type="text"
+            placeholder="What needs to be done?"
+            id="input_newtodo"
+            name="new__todo"
+          />
+        </div>
+        <div class="todos">
+          <div class="nav">
+            <div class="remained_numbers">2 Items left</div>
+            <ul class="nav__btns">
+              <li class="nav__all nav__btn" id="all">All</li>
+              <li class="nav__active nav__btn" id="active">
+                Active
+              </li>
+              <li class="nav__done nav__btn" id="done">Done</li>
+            </ul>
+          </div>
+          <ul class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

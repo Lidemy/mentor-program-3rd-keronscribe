@@ -4,7 +4,6 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$parent_id = $_POST['data-parentId'];
 		$npcomment = $_POST["npComment"];
-		//echo $npcomment;
 	 	if ($npcomment !== ''){
 			$stmt = $conn->prepare("INSERT INTO `keronscribe_comments`(user_id, content, parent_id) VALUES (?, ?, ?)");
 			$stmt->bind_param("ssi", $user_id, $npcomment, $parent_id);
@@ -16,7 +15,6 @@
 	 		}
 		} else {
 			$commentErr = "Comment is required.";
-			// echo "<script> alert('$commentErr');location='board.php'</script>";
 		}
 	}
 	$npcomment = "";
