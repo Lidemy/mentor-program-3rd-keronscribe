@@ -5,49 +5,49 @@ header("Access-Control-Allow-Origin: *");
 require_once("conn.php");
 
 // HTTP method 為 GET 時 
-function get(){
+function get() {
   global $conn; // 全局变量在函数中使用时必须声明为 global。
-	if(isset($_GET["id"])){
+  if(isset($_GET["id"])){
     $id = $_GET["id"];
     get_single_todo($id);
-	} else {
-		get_todos();
-	}
+  } else {
+    get_todos();
+  }
 }
 
 // 取得所有 todo
-function get_todos(){
-	global $conn;
-	$sql = "SELECT * FROM `todos` where is_deleted = 0";
-	$result = $conn->query($sql);
-			if($result->num_rows > 0){
-				$arr = [];
-				while ($row = $result->fetch_assoc()) {
-				$todo = htmlspecialchars($row['todo'], ENT_QUOTES, 'utf-8');
-				$id = $row['id'];
-				$done = $row['done'];
-				$new_item = (object)[
-					'id' => $id,
-					'todo' => $todo,
-					'done' => $done,
-				];
-				array_push($arr, $new_item);
-		}
-		echo json_encode($arr);
-	}
+function get_todos() {
+  global $conn;
+  $sql = "SELECT * FROM `todos` where is_deleted = 0";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0) {
+    $arr = [];
+    while ($row = $result->fetch_assoc()) {
+      $todo = htmlspecialchars($row['todo'], ENT_QUOTES, 'utf-8');
+      $id = $row['id'];
+      $done = $row['done'];
+      $new_item = (object)[
+        'id' => $id,
+        'todo' => $todo,
+        'done' => $done,
+      ];
+      array_push($arr, $new_item);
+    }
+    echo json_encode($arr);
+  }
 }
 
 // 取得單一 todo 
 function get_single_todo($id){
   global $conn;
-	if(is_numeric($id)){
+  if(is_numeric($id)) {
     $sql = "SELECT * FROM `todos` where id = ? and is_deleted = 0";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
-    if($stmt->execute()){
+    if($stmt->execute()) {
       $result = $stmt->get_result();
       $row = $result->fetch_assoc();
-      if($row){
+      if($row) {
         $todo = htmlspecialchars($row['todo'], ENT_QUOTES, 'utf-8');
         $id = $row['id'];
         $done = $row['done'];
@@ -64,26 +64,24 @@ function get_single_todo($id){
         echo json_encode($error);
       }
     }
-	  else{
-		  echo "error";
-	  }		
+    echo "error";
   }
 }
 
 // 新增 TODOS
 function add_todos(){
-	global $conn;
+  global $conn;
   $new_todo = $_GET['newTodo'];
   $sql = "INSERT INTO `todos`(`todo`) VALUES (?)";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $new_todo);
   if($stmt->execute()){
-		$newId = $stmt->insert_id;
-		$new_todo = htmlspecialchars($new_todo);
+    $newId = $stmt->insert_id;
+    $new_todo = htmlspecialchars($new_todo);
     echo json_encode(array(
-        'id' => $newId,
-        'todo' => $new_todo,
-        'done' => 0,
+      'id' => $newId,
+      'todo' => $new_todo,
+      'done' => 0,
       )
     );
   }
@@ -91,7 +89,7 @@ function add_todos(){
 // 刪除 todo
 function delete_todo(){
   global $conn;
-  $id = htmlspecialchars($_GET['deleteId']);
+  $id = $_GET['deleteId'];
   $sql = "UPDATE `todos` SET `is_deleted`=1 WHERE `id` = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("i",$id);
@@ -102,15 +100,15 @@ function delete_todo(){
     );
     echo json_encode($result);
   } else {
-      $result = array(
+    $result = array(
       'request' => 'failed',
     );
-  };	
+  };
 }
 
 function update_todo(){
-  $id = htmlspecialchars($_GET['updateId']);
-  $done = htmlspecialchars($_GET['done']);
+  $id = $_GET['updateId'];
+  $done = $_GET['done'];
   global $conn;
   $sql = "UPDATE `todos` SET `done`=? WHERE `id` = ?";
   $stmt = $conn->prepare($sql);
@@ -126,16 +124,16 @@ function update_todo(){
       $result = array(
       'request' => 'failed',
     );
-  };	
+  };
 }
 
 // 用 switch 來對 HTTP method 進行判斷
 $method = $_SERVER['REQUEST_METHOD'];
 switch ($method) {
-	case "POST": // 新增
+  case "POST": // 新增
     add_todos();
     break;
-	case 'GET': // 讀取
+  case 'GET': // 讀取
     get();
     break;
   case "DELETE": //刪除
