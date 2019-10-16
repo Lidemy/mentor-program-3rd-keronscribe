@@ -1,6 +1,6 @@
 body {
   background: darkgray;
-  /* z-index: -10; */
+  margin: 0px;
 }
 
 .devider {
@@ -9,8 +9,8 @@ body {
 }
 
 .info {
-  margin: 100px 100px 100px 0px;
-  /* border: 1px solid black; */
+  margin-top: 100px;
+  width: fit-content;
 }
 .user {
   font-size: 4rem;
@@ -24,7 +24,7 @@ body {
   grid-row-start: 1;
   grid-column-start: 2;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(19, 32px);
@@ -35,7 +35,7 @@ body {
 .board {
   grid-row-start: 1;
   grid-column-start: 2;
-  width: 80%;
+  /* width: 80%; */
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(18, 32px);
