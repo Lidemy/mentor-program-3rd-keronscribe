@@ -1,0 +1,35 @@
+.post-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 80%;
+	align-items: center;
+}
+
+.post_title {
+	font-size: 2.2rem;
+	margin: 50px 0px 30px 0px;
+}
+
+.post_author {
+	margin-bottom: 30px;
+	color: gray;
+}
+
+
+.post_author::before {
+	content: 'Written by ';
+
+}
+
+.post_body::before {
+	content: '「';
+	font-size: 5rem;
+	font-family: cursive;
+}
+
+.post_body::after {
+	content: '」';
+	font-size: 5rem;
+	font-family: cursive;
+}

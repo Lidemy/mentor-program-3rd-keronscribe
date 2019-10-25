@@ -1,0 +1,24 @@
+.list {
+	display: grid;
+	margin: 50px auto;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: minmax(200px, 200px);
+}
+
+.list>a:hover {
+	transform: scale(1.1);
+	box-shadow: 3px 3px 2px #9370db4f;
+	z-index: 1;
+}
+
+.list>a:nth-child(3n) {
+	background: pink;
+}
+
+.list>a:nth-child(3n-2) {
+	background: lightgray;
+}
+
+.list>a:nth-child(3n-1) {
+	background: aliceblue;
+}
