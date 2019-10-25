@@ -21,7 +21,6 @@ function Home(){
 			<div className="home_title">Home</div>
 			<div className="page-holder">This page is still building, but you can watch me first.</div>
 			<img src="https://picsum.photos/id/1025/700/500" alt="I am a doggy"></img>
-			
 		</div>		
 		</>
 	)

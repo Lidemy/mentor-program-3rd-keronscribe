@@ -23,7 +23,7 @@ function List(){
 			<div className="list-wrapper">
 				<div className='list'>
 					{posts.map(({title,body,id},i) =>{
-						return (<Link to={`/posts/${id}`} className="list-item" data-id={id}key={i} ><ListItem title={title} body={body} key={id} id={id} /></Link>)	
+						return (<Link to={`/posts/${id}`} className="list-item" data-id={id}key={i} ><ListItem title={title} body={body} key={id} id={id}/></Link>)	
 					})}
 				</div>
 			</div>

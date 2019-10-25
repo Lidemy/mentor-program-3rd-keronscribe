@@ -9,7 +9,7 @@ export default function Post(){
   const	[title,setTitle] = useState('');
 	const [body,setbody] = useState('');
 	const [author,setAuthor] = useState('');
-
+	const picUrl = `https://picsum.photos/id/${id}/700/500`
 
   const postUrl = `https://qootest.com/posts/${id}`
 
@@ -22,11 +22,11 @@ export default function Post(){
     })
 	},[])
 
-
 	return(
 		<div className="post-wrapper">
 			<div className="post_title">{title} </div>
 			<div className="post_author">{author}</div>
+			<img src={picUrl} alt="I'm the pic"></img>
 			<div className="post_body">{body} </div>
 		</div>
 	)
